@@ -1,0 +1,89 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Back End Demonstration API
+  description: A simple dog API
+  host: http://localhost:4000
+  basePath: /api/v1/
+  schemes: -https
+      
+   
+tags:
+  - name: Users
+    description: API endpoints for user management.
+  - name: Articles
+    description: Access and perform CRUD operations on blog entries.
+paths:
+  /users/{id}:
+    get:
+      tags:
+        - Users
+      description: Get user by id.
+    put:
+      tags:
+        - Users
+      description: Update user by ID.
+    delete:
+      tags:
+        - Users
+      description: Delete user by ID.
+# paths:
+#   /users/{id}:
+#     get:
+#       tags:
+#         - Users
+#       description:
+#         Get user by id.
+#       responses:
+#         '200':
+#           description: View of a user’s record, excluding password.
+#         '401':
+#           description: Non-admin users can only view their own record.
+#         '404':
+#           description: User was not found in the DB.
+#     put:
+#       tags:
+#         - Users
+#       description:
+#         Update user by ID.
+#       responses:
+#         '200':
+#           description: Update confirmation and link to record.
+#         '404':
+#           description: User was not found in the DB.
+#     delete:
+#       tags:
+#         - Users
+#       description:
+#         Delete user by ID.
+#       responses:
+#         '200':
+#           description: Delete confirmation.
+#         '401':
+#           description: Only admin users can delete user accounts.
+#         '404':
+#           description: User was not found in the DB.
+#   /users/{id}:
+#     parameters:
+#       - in: path
+#         name: id
+#         schema:
+#           type: integer
+#         required: true
+#         description: Numeric id of the user
+#     get:
+#   /users:
+#     summary: Represents an individual user
+#     description: >
+#       This resource represents an individual user in the system.
+#       Each user is identified by a numeric `id`.
+#     post:
+#       tags:
+#         - Users
+#       description:
+#         Create a new user account.
+#       responses:
+#         '201':
+#           description: User created
+
+
